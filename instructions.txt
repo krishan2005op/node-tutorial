@@ -1,0 +1,12 @@
+NODE JS
+ -> Enviroment to run JS outside browser 
+
+
+BUILT-IN METHODS 
+ 1. OS
+ 2. PATH
+ 3. FS
+ 4. HTTP (very important) 
+
+HTTP
+ allow us to make a web server
