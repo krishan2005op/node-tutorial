@@ -1,20 +1,18 @@
-//npm - global command comes with node 
-//npm --version
-
-// local dependency -  use it only in this particular project 
-//npm i <package name>
-
-// global depencdency - use it in project
-//npm install -g <package name>
-// sudo npm install -g <package name> (for mac)
-
-// package.json - manifesr file (stores important info about project/package)
-// manual approach (create package.json in the root , create properties etc.)
-// npm init (step by step, press enter to skip)
-// npm init -y (everything default)
-
-const _ = require('lodash')
-
-const items = [1, [2, [3, [4]]]]
-const newItems = _.flattenDeep(items); // make multiple array into one array
-console.log(newItems);
+const http = require('http')
+const server = http.createServer((req,res) =>{
+    if(req.url === '/'){
+        res.end('Kripanshi pagal hai')
+    }
+    if(req.url === '/about'){
+        // blocking code
+        for (let index = 0; index < 300; index++) {
+            for(let j =0;j<1000;j++){
+                console.log(`${index} ${j}`);
+            }
+        }
+        res.end('kripanshi aur zyada pagal hai')
+    }
+})
+server.listen(5000,(req,res) =>{
+    console.log('dhund raha hu rukja ');
+})
