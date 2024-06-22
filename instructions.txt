@@ -27,3 +27,6 @@ for adding files to the repo we will do as follows in terminal :-
 Nodemon can restart automatically
 =======
 >>>>>>> 06402f40dd41248b8e7b075c027ae37f452270af
+EVENTS
+ 1. event driven programming
+ 2. used heavily in node.JS
