@@ -1,11 +1,29 @@
 const {readFile} = require('fs')
 
-readFile('./content/result-async.txt','utf8',(err,data) => {
-    if(err){
-        console.log('hai ni aisi koi file');
-        return;
-    }
-    else{
-        console.log(data);
-    }
-})
+const getText = (path) => {
+    return new Promise((resolve,reject) => {
+        readFile(path,'utf8',(err,data) => {
+            if(err){
+                reject(err)
+            }
+            else{
+                resolve(data)
+            }
+        })
+    })
+}
+
+// readFile('./content/result-async.txt','utf8',(err,data) => {
+//     if(err){
+//         console.log('hai ni aisi koi file');
+//         return;
+//     }
+//     else{
+//         console.log(data);
+//     }
+// }) with call back
+
+getText('./content/result-async.txt')
+ .then((result) => console.log(result))
+ .catch((err) => console.log(err))
+ 
