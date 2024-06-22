@@ -23,7 +23,18 @@ const getText = (path) => {
 //     }
 // }) with call back
 
-getText('./content/result-async.txt')
- .then((result) => console.log(result))
- .catch((err) => console.log(err))
+// getText('./content/result-async.txt')
+//  .then((result) => console.log(result))
+//  .catch((err) => console.log(err))
+
+ const start = async() =>{
+    try{
+        const first = await getText('./content/result-async.txt');
+        console.log(first)
+    } catch (error) {
+        console.log(error);
+    }
+ }
+
+start()
  
