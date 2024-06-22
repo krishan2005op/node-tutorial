@@ -37,7 +37,6 @@ const writeFilPromise = util.promisify(writeFile)
         const first = await readFilPromise('./content/first.txt','utf8');
         const second = await readFilPromise('./content/second.txt','utf8');
         await writeFilPromise('./content/result-mind-grenade.txt',`this is awesome : ${first} \n ${second}`
-            
         )
         console.log(first,'\n',second)
     } 
