@@ -31,7 +31,8 @@ const getText = (path) => {
     try{
         const first = await getText('./content/first.txt');
         console.log(first)
-    } catch (error) {
+    } 
+    catch (error) {
         console.log(error);
     }
  }
