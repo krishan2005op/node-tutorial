@@ -11,12 +11,19 @@ BUILT-IN METHODS
 HTTP
  allow us to make a web server
 
+<<<<<<< HEAD
  for adding files to the repo we will do as follows in terminal :-
+=======
+for adding files to the repo we will do as follows in terminal :-
+>>>>>>> 06402f40dd41248b8e7b075c027ae37f452270af
  1.  git init
  2.  git add .
  3.  git commit -m "<anything you want to give>"
  4. git remote add origin https://github.com/krishan2005op/node-tutorial.git
     >> git branch -M main
     >> git push -u origin main
+<<<<<<< HEAD
 
 Nodemon can restart automatically
+=======
+>>>>>>> 06402f40dd41248b8e7b075c027ae37f452270af
