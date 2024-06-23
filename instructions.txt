@@ -30,3 +30,9 @@ Nodemon can restart automatically
 EVENTS
  1. event driven programming
  2. used heavily in node.JS
+
+STREAMS (reading or writing some portion of)
+ 1. writable
+ 2. readable
+ 3. duplex
+ 4. transform
