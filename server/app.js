@@ -2,7 +2,7 @@ const http = require('http');
 const {readFileSync} = require('fs')
 
 //get all files
-const homePage = readFileSync('./index.html')
+const homePage = readFileSync('./node-express-course/02-express-tutorial/navbar-app/index.html')
 
 const server = http.createServer((req,res)=>{
     const url = req.url;
