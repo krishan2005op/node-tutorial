@@ -11,9 +11,9 @@ app.get('/',(req,res)=> {
 app.all('*',(req,res)=>{
     res.status(404).send('resource not found')
 })
-
-app.listen(5004,()=>{
-    console.log('server is listening to port : 5000');
+const v= 5004
+app.listen(v,()=>{
+    console.log(`server is listening to port : ${v}`);
 })
 
 
