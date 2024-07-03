@@ -5,8 +5,10 @@ const app = express()
 
 const log = require('./24.2-logger')
 const authorize = require('./24.3-authorise')
+const morgan = require('morgan')
 
-app.use([log,authorize])
+app.use(morgan('tiny'))
+app.use(log)
 // to products and items - '/api' before middleware function
 
 app.get('/',(req,res)=>{
