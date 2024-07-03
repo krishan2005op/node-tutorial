@@ -27,7 +27,7 @@ app.get('/api/v1/query',(req,res)=>{
     const {search,limit} = req.query
     let sortedProducts = [...products];
 
-    if(serach){
+    if(search){
         sortedProducts = sortedProducts.filter((product)=>{
             return product.name.startsWith(search)
         })
@@ -35,8 +35,17 @@ app.get('/api/v1/query',(req,res)=>{
     if(limit){
         sortedProducts = sortedProducts.slice(0,Number(limit))
     }
+    if (sortedProducts.length<1) {
+        // res.send("sorry !! product not found")
+        // console.log("product not found");
+        res.status(200)
+        res.json({
+            sucess: true,
+            data: []
+        })
+    }
     res.status(200).json(sortedProducts)
-    res.send('hello world')
+    
 })
 
 app.listen(5005,()=>{

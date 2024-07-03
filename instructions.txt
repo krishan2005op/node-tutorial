@@ -36,3 +36,17 @@ STREAMS (reading or writing some portion of)
  2. readable
  3. duplex
  4. transform
+
+middleware are the functions which execute during the request of the server 
+
+
+default code for making server
+ const express = require('express')
+const app = express()
+
+
+
+
+app.listen(5006,()=>{
+    console.log('server is listening to port : 5006');
+})
