@@ -41,7 +41,7 @@ middleware are the functions which execute during the request of the server
 
 
 default code for making server
- const express = require('express')
+const express = require('express')
 const app = express()
 
 
