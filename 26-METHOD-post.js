@@ -4,6 +4,7 @@ const app = express()
 
 //static asset
 app.use(express.static('node-express-course/02-express-tutorial/methods-public'))
+//parse from data
 app.use(express.urlencoded({extended: false})) //in order to get the data on our terminal
 app.use(express.json())
 
@@ -22,9 +23,18 @@ app.post('/api/people',(req,res)=>{
 app.post('/login',(req,res)=>{
     const {name} = req.body;
     if (name){
+        console.log(req.body);
         return res.status(200).send(`Welcome ${name}`)
     }
     res.status(401).send('name toh daal le ')
+})
+
+app.post('/api/postman/people',(req,res)=>{
+    const {id ,name } =  req.body
+    if (!name) {
+        return res.status(410).json({success :false,msg:'plz provide data'})
+    }
+    res.status(201).json({success:true,data: [...people, id ,name]})
 })
 
 app.listen(5008,()=>{
