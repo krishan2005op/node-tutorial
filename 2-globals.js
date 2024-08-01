@@ -1,7 +1,7 @@
-console.log(__filename);
-setInterval(()=>{
-    console.log("hello world");
-},1000);
+console.log(process);
+// setTimeout(()=>{
+//     console.log("hello world");
+// },1000);
 
 // GLOBALS - NO WINDOW 
 
