@@ -9,7 +9,7 @@ const sayHi /*same as function anme*/  = require('./5-utilas')
 sayHi('susan')
 
 const data = require('./6-alternative-flavor')
-console.log(data.singleperson);
+console.log(data);
 
 const addValues = require('./7-mind-grenade')
 addValues.sub(7,7);
