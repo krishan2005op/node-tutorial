@@ -14,6 +14,7 @@ const currentOS = {
     release:os.release(),
     totalMem: os.totalmem(),
     freeMem: os.freemem(),
+    hostname: os.hostname()
 }
 console.log(currentOS);
 
