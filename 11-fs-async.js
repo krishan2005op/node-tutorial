@@ -1,4 +1,5 @@
-const {readFile, writeFile} = require('fs')
+const {readFile, writeFile} = require('fs');
+const { first } = require('lodash');
 
 console.log('start');
 readFile('./content/first.txt','utf8',(err,result)=>{
@@ -12,7 +13,7 @@ readFile('./content/first.txt','utf8',(err,result)=>{
             console.log('no such file bund marra');
             return ; 
         }
-        const second = result;
+        const second = results;
         writeFile(
             './content/result-async.txt',
             'I am a programmer'
@@ -26,4 +27,5 @@ readFile('./content/first.txt','utf8',(err,result)=>{
         )
     })
 })
+
 console.log('starting the next one');
