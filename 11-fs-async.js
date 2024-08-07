@@ -1,3 +1,4 @@
+const { log } = require('console');
 const {readFile, writeFile} = require('fs');
 const { first } = require('lodash');
 
@@ -10,7 +11,7 @@ readFile('./content/first.txt','utf8',(err,result)=>{
     const first = result;
     readFile('./content/second.txt','utf8',(err,results)=>{
         if(err){
-            console.log('no such file bund marra');
+            console.log('no such file ');
             return ; 
         }
         const second = results;
@@ -19,12 +20,14 @@ readFile('./content/first.txt','utf8',(err,result)=>{
             'I am a programmer'
             ,(err,resuult)=>{
                 if(err){
-                    console.log('no such file bund marra');
+                    console.log('no such file');
                     return ; 
                 }
                 console.log('done with this task ');
-            }
-        )
+            },
+        console.log(`${first} \n ${second}`));
+        
+        
     })
 })
 

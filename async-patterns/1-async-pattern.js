@@ -1,7 +1,7 @@
 const http = require('http')
 const server = http.createServer((req,res) =>{
     if(req.url === '/'){
-        res.end('Kripanshi pagal hai')
+        res.end('Hello')
     }
     if(req.url === '/about'){
         // blocking code
@@ -10,9 +10,9 @@ const server = http.createServer((req,res) =>{
                 console.log(`${index} ${j}`);
             }
         }
-        res.end('kripanshi aur zyada pagal hai')
+        res.end('Hello Again')
     }
 })
 server.listen(5000,(req,res) =>{
-    console.log('dhund raha hu rukja ');
+    console.log(' port ✅ ');
 })
