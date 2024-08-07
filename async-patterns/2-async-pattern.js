@@ -34,14 +34,14 @@ const writeFilPromise = util.promisify(writeFile)
 
  const start = async() =>{
     try{
-        const first = await readFilPromise('./content/first.txt','utf8');
-        const second = await readFilPromise('./content/second.txt','utf8');
-        await writeFilPromise('./content/result-mind-grenade.txt',`this is awesome : ${first} \n ${second}`
+        const first = await readFilPromise('../content/subfolder/first.txt','utf8');
+        const second = await readFilPromise('../content/subfolder/second.txt','utf8');
+        await writeFilPromise('../content/result-mind-grenade.txt',`this is awesome : ${first} \n ${second}`
         )
         console.log(first,'\n',second)
     } 
     catch (error) {
-        console.log(error);
+        console.log("aisi koi file hi nhi hai");
     }
  }
 
